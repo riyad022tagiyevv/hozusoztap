@@ -21,7 +21,10 @@ keyboard = InlineKeyboardMarkup([
 
 
 START = """
-**🔮 Salam, bu bot ilə qrupda vaxtınızı maraqlı keçirə bilərsiniz🥳**
+**👋 Salam. Mən XAOS Game**
+
+**⚡ Mın Xaos Federasiyasının Rəsmi Söz Oyun Botuyam**
+bu bot ilə qrupda vaxtınızı maraqlı keçirə bilərsiniz🥳**
 
 ➤ Məlumat üçün 👉 /help üzərinə klikləyin əmrlər asan və sadədir👍
 """
