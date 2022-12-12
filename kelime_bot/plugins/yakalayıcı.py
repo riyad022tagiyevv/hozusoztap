@@ -22,7 +22,7 @@ async def buldu(c:Client, m:Message):
     try:
         if m.chat.id in oyun:
             if m.text.lower() == oyun[m.chat.id]["kelime"]:
-                await c.send_message(m.chat.id,f"🥳 Təbriklər\n**{m.from_user.mention}** \n**<code>{oyun[m.chat.id]['kelime']}</code>** sözü tapdı ✅")
+                await c.send_message(m.chat.id,f"✅ Təbriklər\n**{m.from_user.mention}** \n**<code>{oyun[m.chat.id]['kelime']}</code>** Sözü Tapdı")
                 if f"{m.from_user.mention}" in rating:
                     rating[f"{m.from_user.mention}"] += 50
                 else:
@@ -47,7 +47,7 @@ async def buldu(c:Client, m:Message):
                     for i in siralama:
                         siralama_text += i + "\n"
                     
-                    return await c.send_message(m.chat.id,f"✅ Oyun bitdi ✓ \n\n🏆 Qaliblər :\n\n{siralama_text}\n\nYenidən oyuna başlamaq üçün /oyna yazın")
+                    return await c.send_message(m.chat.id,f"✅ Oyun bitdi\n\n🏆 Qaliblər :\n\n{siralama_text}\n\n♻️ Yenidən Oyuna Başlamaq Üçün /oyna Yazın")
                 
                 
                 
@@ -62,7 +62,7 @@ async def buldu(c:Client, m:Message):
 🌠 Tapılacaq Söz: <code>{kelime_list}</code>
 📌 İpucu: {oyun[m.chat.id]["kelime"][0]}
 🔗 Uzunluq: {int(len(kelime_list)/2)}
-⏳ Qarışıq yazılmış bu hərflərdən əsas sözü tapmağa çalış!
+⏳ Qarışıq Yazılmış Bu Hərflərdən Əsas Sözü Tapmağa Çalış!
                         """
                 await c.send_message(m.chat.id, text)
     except KeyError:
