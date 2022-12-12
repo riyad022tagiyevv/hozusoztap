@@ -21,21 +21,22 @@ keyboard = InlineKeyboardMarkup([
 
 
 START = """
-**👋 Salam. Mən XAOS Game**
+**👋 Salam. Mən 𝕏𝔸𝕆𝕊 𝔾𝔸𝕄𝔼**
 
-**⚡ Mın Xaos Federasiyasının Rəsmi Söz Oyun Botuyam**
-bu bot ilə qrupda vaxtınızı maraqlı keçirə bilərsiniz🥳**
+**⚡ Mən 𝕏𝔸𝕆𝕊 Federasiyasının Rəsmi Söz Oyun Botuyam**
+**📌 Bu Bot İlə Qrupda Vaxtınızı Maraqlı Keçirə Bilərsiniz**
 
-➤ Məlumat üçün 👉 /help üzərinə klikləyin əmrlər asan və sadədir👍
+⚙ Əmrlər Üçün ➪ /help Əmrindən İsdifadə Edin 
+✅ Əmrlər Asan Və Sadədir
 """
 
 HELP = """
-**ℹ️ Əmrlər Menyusu**
+**⚙ Əmrlər Menyusu**
 
-➔  /oyna - oyunu başlatmaq
-➔  /kec - sözü dəyişdirmək
-➔  /dayan - oyunu dayandırmaq
-➔  /reytinq - bütün qruplar üzrə oyunçuların xallarına baxmaq
+➪ /oyna - Yeni Oyuna Başla
+➪  /kec - Sözü Dəyiş
+➪ /dayan - Oyunu Dayandır
+➪  /top - Bütün Qruplar Üzrə Oyunçuların Xalları
 """
 
 # Komutlar. 
@@ -59,9 +60,9 @@ async def kelimeoyun(c:Client, m:Message):
         aktif = False
 
     if aktif:
-        await m.reply("**❗ Qrupunuzda oyun  onsuzda davam edir!\nOyunu dayandırıb yenidən başlamaq üçün /dayan yazın vəya oyuna davam etmək üçün /kec yazın")
+        await m.reply("**❗ Qrupunuzda Oyun Hal-Hazırda Oyun Davam Edir!\nℹ Oyunu Dayandırıb Yenidən Başlamaq Üçün /dayan Yazın Və Ya Oyuna Davam Etmək Üçün /kec Yazın")
     else:
-        await m.reply(f"**{m.from_user.mention} **tərəfindən\nsöz oyunu başladı !", reply_markup=kanal)
+        await m.reply(f"**{m.from_user.mention} **Tərəfindən\nSöz Oyunu Başladı !", reply_markup=kanal)
         
         oyun[m.chat.id] = {"kelime":kelime_sec()}
         oyun[m.chat.id]["aktif"] = True
@@ -81,7 +82,7 @@ async def kelimeoyun(c:Client, m:Message):
 🌠 Tapılacaq Söz: <code>{kelime_list}</code>
 📌 İpucu: {oyun[m.chat.id]["kelime"][0]}
 🔗 Uzunluq: {int(len(kelime_list)/2)}
-⏳ Qarışıq yazılmış bu hərflərdən əsas sözü tapmağa çalış!
+⏳ Qarışıq Yazılmış Bu Hərflərdən Əsas Sözü Tapmağa Çalış!
         """
         await c.send_message(m.chat.id, text)
         
