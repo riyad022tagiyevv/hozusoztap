@@ -21,7 +21,7 @@ async def passs(c:Client, m:Message):
     if aktif:
         if oyun[m.chat.id]["kec"] < 30:
             oyun[m.chat.id]["kec"] += 1
-            await c.send_message(m.chat.id,f"⚡️ Növbətiyə keçid edildi ⚔️\n✅ Doğru Söz: **<code>{oyun[m.chat.id]['kelime']}</code>**")
+            await c.send_message(m.chat.id,f"➡️ Bir Sonrakı Sözə Keçid Edildi\n✅ Doğru Söz: **<code>{oyun[m.chat.id]['kelime']}</code>**")
             
             oyun[m.chat.id]["kelime"] = kelime_sec()
             oyun[m.chat.id]["aktif"] = True
@@ -38,11 +38,11 @@ async def passs(c:Client, m:Message):
 🌠 Tapılacaq Söz: <code>{kelime_list}</code>
 📌 İpucu: {oyun[m.chat.id]["kelime"][0]}
 🔗 Uzunluq: {int(len(kelime_list)/2)}
-⏳ Qarışıq yazılmış bu hərflərdən əsas sözü tapmağa çalış!
+〽️ Qarışıq Tazılmış Bu hHərflərdən Əsas Sözü Tapmağa Çalış!
             """
             await c.send_message(m.chat.id, text)
             
         else:
-            await c.send_message(m.chat.id, f"<code>**❗ Keçid saxlanıldı! </code> \nOyunu dayandırmaq üçün /dayan yazın ✍🏻**")
+            await c.send_message(m.chat.id, f"<code>**❗ Keçid saxlanıldı! </code> \n⛔ Oyunu dayandırmaq üçün /dayan Əmrindən İsdifədə Edin**")
     else:
-        await m.reply(f"❗ **Qrupda aktiv oyun yoxdur!\n Yeni oyuna başlamaq üçün /oyna yazın**")
+        await m.reply(f"❗ **Qrupda Qktiv Oyun Yoxdur!\n♻️ Yeni Oyuna Başlamaq Üçün /oyna Əmrindən İsdifadə Edin**")
