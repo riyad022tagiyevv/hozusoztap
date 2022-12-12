@@ -14,7 +14,7 @@ keyboard = InlineKeyboardMarkup([
         InlineKeyboardButton("➕ Qrupuna əlavə et ➕", url=f"http://t.me/XAOS_Gamebot?startgroup=new")
     ],
     [
-        InlineKeyboardButton("🇦🇿 𝕆𝕎ℕ𝔼ℝ", url="t.me/Dakanca_Hozu")
+        InlineKeyboardButton("🇦🇿 𝕆𝕎ℕ𝔼ℝ 👨‍💻", url="t.me/Dakanca_Hozu")
     ],
     [
         InlineKeyboardButton("👮‍♂️ 𝔽𝔼𝔻𝔼ℝ𝔸𝕊𝕀𝕐𝔸 𝕊𝔸ℍ𝕀𝔹𝕀", url="https://t.me/Crazymmc")
