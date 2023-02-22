@@ -11,24 +11,24 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 keyboard = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton("➕ Qrupuna əlavə et ➕", url=f"http://t.me/XAOS_Gamebot?startgroup=new")
+        InlineKeyboardButton("➕ Qrupuna əlavə et ➕", url=f"http://t.me/DTOGamebot?startgroup=new")
     ],
     [
-        InlineKeyboardButton("🇦🇿 𝕆𝕎ℕ𝔼ℝ 👨‍💻", url="t.me/Dakanca_Hozu")
+        InlineKeyboardButton("🇦🇿 𝕆𝕎ℕ𝔼ℝ ", url="t.me/Thagiyevv")
     ],
     [
-        InlineKeyboardButton("👮‍♂️ 𝔽𝔼𝔻𝔼ℝ𝔸𝕊𝕀𝕐𝔸 𝕊𝔸ℍ𝕀𝔹𝕀", url="https://t.me/Crazymmc")
+        InlineKeyboardButton("👮‍♂️ 𝔽𝔼𝔻𝔼ℝ𝔸𝕊𝕀𝕐𝔸 𝕊𝔸ℍ𝕀𝔹𝕀", url="https://t.me/demirofff_052")
     ],
     [
-        InlineKeyboardButton("💬 𝕊𝕆ℍ𝔹𝔼𝕋 ℚℝ𝕌ℙ𝕌𝕄𝕌ℤ", url="https://t.me/Crazymmc")  
+        InlineKeyboardButton("💬 𝕊𝕆ℍ𝔹𝔼𝕋 ℚℝ𝕌ℙ𝕌𝕄𝕌ℤ", url="https://t.me/RiyaddBlogg")  
     ]
 ])
 
 
 START = """
-**👋 Salam. Mən 𝕏𝔸𝕆𝕊 𝔾𝔸𝕄𝔼**
+**👋 Salam. Mən ᴅᴛö 𝔾𝔸𝕄𝔼**
 
-**⚡ Mən 𝕏𝔸𝕆𝕊 Federasiyasının Rəsmi Söz Oyun Botuyam**
+**⚡ Mən ᴅᴛö Federasiyasının Rəsmi Söz Oyun Botuyam**
 **📌 Bu Bot İlə Qrupda Vaxtınızı Maraqlı Keçirə Bilərsiniz**
 
 ⚙ Əmrlər Üçün ➪ /help Əmrindən İsdifadə Edin 
@@ -41,7 +41,7 @@ HELP = """
 ➪ /oyna - Yeni Oyuna Başla
 ➪  /kec - Sözü Dəyiş
 ➪ /dayan - Oyunu Dayandır
-➪  /top - Bütün Qruplar Üzrə Oyunçuların Xalları
+➪  /reytinq - Bütün Qruplar Üzrə Oyunçuların Xalları
 """
 
 # Komutlar. 
@@ -83,7 +83,7 @@ async def kelimeoyun(c:Client, m:Message):
             kelime_list+= harf + " "
         
         text = f"""
-🎯 Raund: {oyun[m.chat.id]['round']}/100
+🎯 Raund: {oyun[m.chat.id]['round']}/30
 🌠 Tapılacaq Söz: <code>{kelime_list}</code>
 📌 İpucu: {oyun[m.chat.id]["kelime"][0]}
 🔗 Uzunluq: {int(len(kelime_list)/2)}
