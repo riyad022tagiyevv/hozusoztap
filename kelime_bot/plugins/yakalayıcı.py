@@ -38,7 +38,7 @@ async def buldu(c:Client, m:Message):
                 oyun[m.chat.id]["kelime"] = kelime_sec()
                 oyun[m.chat.id]["round"] = oyun[m.chat.id]["round"] + 1
                 
-                if not oyun[m.chat.id]["round"] <= 100:
+                if not oyun[m.chat.id]["round"] <= 30:
                     siralama = []
                     for i in oyun[m.chat.id]["oyuncular"]:
                         siralama.append(f"{i} :   {oyun[m.chat.id]['oyuncular'][i]}  Bal")
@@ -58,7 +58,7 @@ async def buldu(c:Client, m:Message):
                     kelime_list+= harf + " "
             
                 text = f"""
-🎯 Raund: {oyun[m.chat.id]['round']}/100
+🎯 Raund: {oyun[m.chat.id]['round']}/30
 🌠 Tapılacaq Söz: <code>{kelime_list}</code>
 📌 İpucu: {oyun[m.chat.id]["kelime"][0]}
 🔗 Uzunluq: {int(len(kelime_list)/2)}
